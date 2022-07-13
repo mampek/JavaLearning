@@ -20,6 +20,15 @@ public class Main {
         AlternativeDepartment personnelDept =
                 new AlternativeDepartment("Personnel", "Bill Purple");
 
+        ExpenseClaim expenseClaim = new ExpenseClaim(1,12, "12.01.2011",120.00);
+        System.out.println(expenseClaim.isPaid());
+        expenseClaim.setPaid(true);
+        expenseClaim.setApproved(true);
+        expenseClaim.setPaid(true);
+        System.out.println(expenseClaim.isPaid());
 
+        ExpenseItem expenseItem =
+                new ExpenseItem(1,13, "hotel", "accomendation", 23.00);
+        System.out.println(expenseItem.getExpenseType());
     }
 }
