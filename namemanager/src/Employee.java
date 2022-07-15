@@ -6,6 +6,7 @@ public class Employee {
     private String surname;
     private String jobTitle;
     private String department;
+    private ExpenseClaim[] claims;
 
     public Employee() {
 
