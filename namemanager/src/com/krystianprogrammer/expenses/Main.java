@@ -1,3 +1,10 @@
+package com.krystianprogrammer.expenses;
+
+import com.krystianprogrammer.expenses.domain.Employee;
+import com.krystianprogrammer.expenses.domain.Employees;
+import com.krystianprogrammer.expenses.domain.ExpenseClaim;
+import com.krystianprogrammer.expenses.domain.ExpenseItem;
+
 public class Main {
     public static void main(String[] args) {
         Employee employee1 = new Employee();
@@ -27,15 +34,6 @@ public class Main {
 
         Employee foundEmployee2 = employees.findBySurname("Mampe");
         System.out.println("Didn't found " + (foundEmployee2 == null));
-
-
-        Department financeDept =
-                new Department("Finance", "Sally Green");
-
-        financeDept.getManagerName();
-
-        AlternativeDepartment personnelDept =
-                new AlternativeDepartment("Personnel", "Bill Purple");
 
         ExpenseClaim expenseClaim = new ExpenseClaim(1,12, "12.01.2011",120.00);
         System.out.println(expenseClaim.isPaid());

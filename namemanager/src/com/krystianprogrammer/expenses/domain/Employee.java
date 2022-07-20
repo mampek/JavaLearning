@@ -1,3 +1,5 @@
+package com.krystianprogrammer.expenses.domain;
+
 public class Employee {
 
     private int id;
