@@ -1,5 +1,6 @@
 package com.krystianprogrammer.travelbooking;
 
+import com.krystianprogrammer.travelbooking.domain.BusTicket;
 import com.krystianprogrammer.travelbooking.domain.TrainTicket;
 
 import java.math.BigDecimal;
@@ -12,11 +13,23 @@ public class Main {
         trainTicket.cancel();
 
         TrainTicket trainTicket2 = new TrainTicket(123L,"London", "Edinburgh", new BigDecimal("59.00"),
-                LocalDateTime.of(2022,3, 7, 16, 03),
-                LocalDateTime.of(2022,3, 7, 19, 03),
+                LocalDateTime.of(2022,8, 7, 16, 03),
+                LocalDateTime.of(2022,8, 7, 19, 03),
                 1, 3, 42);
 
         trainTicket2.upgrade();
 
+        String[] providers = {"First bus company", "Second bus company"};
+
+        BusTicket busTicket = new BusTicket(124L,"London", "Edinburgh", new BigDecimal("59.00"),
+                LocalDateTime.of(2022,8, 7, 16, 03),
+                LocalDateTime.of(2022,8, 7, 19, 03),
+                providers);
+
+        trainTicket2.cancel();
+        busTicket.cancel();
+
     }
+
+
 }
