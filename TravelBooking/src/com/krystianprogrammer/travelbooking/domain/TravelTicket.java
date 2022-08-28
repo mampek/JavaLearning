@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalDateTime;
 
-public class TravelTicket {
+public abstract class TravelTicket {
 
     private Long bookingRef;
     private String origin;
@@ -28,7 +28,7 @@ public class TravelTicket {
         return bookingRef;
     }
 
-    public void setBookingRef(Long bookingRef) {
+    protected void setBookingRef(Long bookingRef) {
         this.bookingRef = bookingRef;
     }
 
@@ -36,7 +36,7 @@ public class TravelTicket {
         return origin;
     }
 
-    public void setOrigin(String origin) {
+    protected void setOrigin(String origin) {
         this.origin = origin;
     }
 
@@ -44,7 +44,7 @@ public class TravelTicket {
         return destination;
     }
 
-    public void setDestination(String destination) {
+    protected void setDestination(String destination) {
         this.destination = destination;
     }
 
@@ -52,7 +52,7 @@ public class TravelTicket {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    protected void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -60,7 +60,7 @@ public class TravelTicket {
         return departureTime;
     }
 
-    public void setDepartureTime(LocalDateTime departureTime) {
+    protected void setDepartureTime(LocalDateTime departureTime) {
         this.departureTime = departureTime;
     }
 
@@ -68,7 +68,7 @@ public class TravelTicket {
         return arrivalTime;
     }
 
-    public void setArrivalTime(LocalDateTime arrivalTime) {
+    protected void setArrivalTime(LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 

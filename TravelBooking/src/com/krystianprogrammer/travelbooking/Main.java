@@ -1,7 +1,9 @@
 package com.krystianprogrammer.travelbooking;
 
 import com.krystianprogrammer.travelbooking.domain.BusTicket;
+import com.krystianprogrammer.travelbooking.domain.PlaneTicket;
 import com.krystianprogrammer.travelbooking.domain.TrainTicket;
+import com.krystianprogrammer.travelbooking.domain.TravelTicket;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -28,6 +30,10 @@ public class Main {
 
         trainTicket2.cancel();
         busTicket.cancel();
+
+        //TravelTicket ticket = new TravelTicket();
+        PlaneTicket planeTicket = new PlaneTicket();
+
 
     }
 
