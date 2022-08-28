@@ -3,6 +3,7 @@ package com.krystianprogrammer.travelbooking.domain;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public abstract class TravelTicket {
 
@@ -77,5 +78,30 @@ public abstract class TravelTicket {
     }
     public void cancel(){
         System.out.println("I am cancelling the ticket");
+    }
+
+    @Override
+    public String toString() {
+        return "TravelTicket{" +
+                "bookingRef=" + bookingRef +
+                ", origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                ", price=" + price +
+                ", departureTime=" + departureTime +
+                ", arrivalTime=" + arrivalTime +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TravelTicket that = (TravelTicket) o;
+        return Objects.equals(bookingRef, that.bookingRef) && Objects.equals(origin, that.origin) && Objects.equals(destination, that.destination) && Objects.equals(price, that.price) && Objects.equals(departureTime, that.departureTime) && Objects.equals(arrivalTime, that.arrivalTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingRef, origin, destination, price, departureTime, arrivalTime);
     }
 }

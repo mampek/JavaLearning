@@ -2,6 +2,7 @@ package com.krystianprogrammer.travelbooking.domain;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class TrainTicket extends TravelTicket{
 
@@ -52,5 +53,28 @@ public class TrainTicket extends TravelTicket{
         else {
             System.out.println("You are already in 1st class");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "TrainTicket{" +
+                "travelClass=" + travelClass +
+                ", carriageNumber=" + carriageNumber +
+                ", seatNumber=" + seatNumber +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        TrainTicket that = (TrainTicket) o;
+        return Objects.equals(travelClass, that.travelClass) && Objects.equals(carriageNumber, that.carriageNumber) && Objects.equals(seatNumber, that.seatNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), travelClass, carriageNumber, seatNumber);
     }
 }

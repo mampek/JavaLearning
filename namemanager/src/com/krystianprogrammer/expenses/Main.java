@@ -44,6 +44,18 @@ public class Main {
 
         ExpenseItem expenseItem =
                 new ExpenseItem(1,13, "hotel", "accomendation", 23.00);
-        System.out.println(expenseItem.getExpenseType());
+        System.out.println(expenseItem.getDescription());
+
+        System.out.println(employee1.toString());
+
+        System.out.println(employee1); //toString  don't need
+
+        Employee employee3 = new Employee();
+        employee3.setId(1);
+        employee3.setTitle("Mr");
+        employee3.setFirstName("Matt");
+        employee3.setSurname("Greencroft");
+
+        System.out.println(employee1.equals(employee3));
     }
 }
