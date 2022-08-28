@@ -5,11 +5,11 @@ import java.util.Objects;
 public class ExpenseItem {
     private Integer id;
     private Integer claimId;
-    private String expenseType;
+    private ExpenseType expenseType;
     private String description;
     private double amount;
 
-    public ExpenseItem(Integer id, Integer claimId, String expenseType, String description, double amount) {
+    public ExpenseItem(Integer id, Integer claimId, ExpenseType expenseType, String description, double amount) {
         this.id = id;
         this.claimId = claimId;
         this.expenseType = expenseType;
@@ -25,7 +25,7 @@ public class ExpenseItem {
         return claimId;
     }
 
-    public String getExpenseType() {
+    public ExpenseType getExpenseType() {
         return expenseType;
     }
 

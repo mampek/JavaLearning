@@ -1,9 +1,6 @@
 package com.krystianprogrammer.expenses;
 
-import com.krystianprogrammer.expenses.domain.Employee;
-import com.krystianprogrammer.expenses.domain.Employees;
-import com.krystianprogrammer.expenses.domain.ExpenseClaim;
-import com.krystianprogrammer.expenses.domain.ExpenseItem;
+import com.krystianprogrammer.expenses.domain.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +23,7 @@ public class Main {
 
         employees.addEmployee(employee1);
         employees.addEmployee(employee2);
-        employees.addEmployee(new Employee(3,"Mrs","Susan","Brown", "Director", "Finance"));
+        employees.addEmployee(new Employee(3,"Mrs","Susan","Brown", "Director", Department.MARKETING));
         employees.printEmployees();
 
         Employee foundEmployee = employees.findBySurname("Brown");
@@ -43,12 +40,12 @@ public class Main {
         System.out.println(expenseClaim.isPaid());
 
         ExpenseItem expenseItem =
-                new ExpenseItem(1,13, "hotel", "accomendation", 23.00);
+                new ExpenseItem(1,13, ExpenseType.ACCOMODATION, "The Grand Hotel", 23.00);
         System.out.println(expenseItem.getDescription());
 
-        System.out.println(employee1.toString());
+        //System.out.println(employee1.toString());
 
-        System.out.println(employee1); //toString  don't need
+        System.out.println(employee1); //toString is not needed
 
         Employee employee3 = new Employee();
         employee3.setId(1);

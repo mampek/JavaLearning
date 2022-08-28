@@ -3,6 +3,7 @@ package com.krystianprogrammer.travelbooking.domain;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoField;
 import java.util.Objects;
 
 public abstract class TravelTicket {
@@ -50,6 +51,9 @@ public abstract class TravelTicket {
     }
 
     public BigDecimal getPrice() {
+        if (price == null) {
+            return BigDecimal.ZERO;
+        }
         return price;
     }
 
@@ -58,6 +62,7 @@ public abstract class TravelTicket {
     }
 
     public LocalDateTime getDepartureTime() {
+        //System.out.println(departureTime.get(ChronoField.YEAR));
         return departureTime;
     }
 
